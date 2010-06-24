@@ -25,7 +25,8 @@ class BaseioLegacyRedirectActions extends sfActions
     $newRoute = $request->getParameter('new_route');
     $this->forward404Unless($newRoute);
 
-    if (strpos($newRoute, '@') !== 0)
+    // if we have a route without an "@" (and not an absolute url), prepend it with "@"
+    if (strpos($newRoute, '@') !== 0 && strpos($newRoute, 'http') !== 0)
     {
       $newRoute = '@'.$newRoute;
     }
