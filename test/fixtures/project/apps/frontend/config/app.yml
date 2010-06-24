@@ -1,0 +1,9 @@
+all:
+  legacy_redirect:
+    urls:
+      contact_us:
+        old_url:   '/contact-us'
+        new_route: '@contact'
+      contact_us2:
+        old_url:   '/contact-us2'
+        new_route: 'contact'

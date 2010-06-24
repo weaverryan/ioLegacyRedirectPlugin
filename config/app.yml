@@ -1,0 +1,6 @@
+all:
+  legacy_redirect:
+    urls:    []
+    #  contact_us:
+    #    old_url:   '/contact-us'
+    #    new_ruote: '@contact'
