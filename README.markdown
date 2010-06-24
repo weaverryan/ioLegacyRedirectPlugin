@@ -48,3 +48,19 @@ all:
 
 When the url `/contact-us` is hit, it will redirect to the url represented
 by the `contact` route using an SEO-friendly 301 redirect.
+
+Testing
+-------
+
+A helper function is made available so that you can quickly test the sanity
+of all of your legacy urls. This won't verify that each goes to the correct
+location, but will verify that all legacy urls redirect to a real route:
+
+    // test/functional/yourApp/yourTestName.php
+    include(dirname(__FILE__).'/../../bootstrap/functional.php');
+    include(sfConfig::get('sf_plugins_dir').'/ioLegacyRedirectPlugin/test/lib/ioLegacyRedirectTestHelper.php');
+    
+    $browser = new dailysTestFunctional(new sfBrowser());
+    
+    test_all_legacy_urls($browser);
+
