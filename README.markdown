@@ -39,12 +39,12 @@ Usage
 The usage of the plugin is somewhat limited, but very simple. Create a map
 of your old urls to your new routes in `app.yml`:
 
-all:
-  legacy_redirect:
-    urls:
-      contact_us:
-        old_url:   '/contact-us'
-        new_route: '@contact'
+    all:
+      legacy_redirect:
+        urls:
+          contact_us:
+            old_url:   '/contact-us'
+            new_route: '@contact'
 
 When the url `/contact-us` is hit, it will redirect to the url represented
 by the `contact` route using an SEO-friendly 301 redirect.
