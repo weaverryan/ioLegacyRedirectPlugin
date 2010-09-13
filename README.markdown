@@ -60,7 +60,7 @@ location, but will verify that all legacy urls redirect to a real route:
     include(dirname(__FILE__).'/../../bootstrap/functional.php');
     include(sfConfig::get('sf_plugins_dir').'/ioLegacyRedirectPlugin/test/lib/ioLegacyRedirectTestHelper.php');
     
-    $browser = new dailysTestFunctional(new sfBrowser());
+    $browser = new sfTestFunctional(new sfBrowser());
     
     test_all_legacy_urls($browser);
 
