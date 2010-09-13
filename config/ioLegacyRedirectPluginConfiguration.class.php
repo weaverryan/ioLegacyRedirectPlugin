@@ -66,7 +66,7 @@ class ioLegacyRedirectPluginConfiguration extends sfPluginConfiguration
         'new_route' => $legacyUrl['new_route'],
       ));
 
-      $routing->appendRoute('legacy_redirect_'.$key, $route);
+      $routing->prependRoute('legacy_redirect_'.$key, $route);
     }
   }
 }

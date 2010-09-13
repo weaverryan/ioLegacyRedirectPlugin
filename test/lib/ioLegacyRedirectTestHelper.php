@@ -10,7 +10,7 @@ function test_all_legacy_urls(sfTestFunctional $browser)
   
   foreach ($legacyUrls as $page)
   {
-    $browser
+    $browser->info(sprintf('Testing legacy url "%s" => "%s"', $page['old_url'], $page['new_route']))
       ->get($page['old_url'])
 
       ->with('request')->begin()
